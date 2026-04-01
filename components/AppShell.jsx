@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import SideMenu from "./SideMenu";
 import { getNavItems } from "../lib/nav";
 import { setAuthToken } from "../lib/api";
+import iramLogo from "../assets/iram_logo.png";
 import { formatTajikPhoneDisplay } from "../lib/phone";
 
 function navLinkClass(active) {
@@ -35,7 +37,13 @@ export default function AppShell({ title, user, children }) {
       {/* Навигация на ПК / большом планшете (≥1024px) */}
       <aside className="hidden lg:flex lg:flex-col lg:w-56 lg:shrink-0 lg:border-r lg:border-gray-200/80 lg:bg-white/80 lg:backdrop-blur-xl lg:sticky lg:top-0 lg:h-dvh lg:min-h-0">
         <div className="p-4 border-b border-gray-100/80 shrink-0">
-          <p className="text-xs uppercase tracking-[0.16em] text-gray-500">IRAM</p>
+          <div className="mb-3 flex items-center gap-3">
+            <Image src={iramLogo} alt="IRAM" className="h-12 w-12 rounded-2xl object-contain" priority />
+            <div className="min-w-0">
+              <p className="text-xs uppercase tracking-[0.16em] text-gray-500">IRAM</p>
+              <p className="text-sm font-semibold text-gray-900">Санаторий</p>
+            </div>
+          </div>
           <p className="font-semibold text-gray-900 truncate" title={userLabel}>
             {userLabel}
           </p>

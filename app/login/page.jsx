@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { api, setAuthToken } from "../../lib/api";
+import iramLogo from "../../assets/iram_logo.png";
 import { formatTajikPhoneDisplay, formatTajikPhoneForApi, TAJIKISTAN_PHONE_PREFIX } from "../../lib/phone";
 
 function humanizeLoginError(message) {
@@ -65,6 +67,14 @@ export default function LoginPage() {
         className="w-full max-w-sm sm:max-w-md rounded-[22px] bg-white/85 backdrop-blur-xl p-6 sm:p-8 shadow-[0_12px_40px_rgba(15,23,42,0.08)] ring-1 ring-black/[0.04]"
       >
         <header className="mb-6 text-center">
+          <div className="mx-auto mb-4 flex justify-center">
+            <Image
+              src={iramLogo}
+              alt="IRAM"
+              priority
+              className="h-24 w-24 rounded-3xl object-contain"
+            />
+          </div>
           <h1 className="text-[1.85rem] font-semibold tracking-tight text-slate-900 leading-none">
             <span className="bg-gradient-to-r from-teal-800 via-emerald-700 to-teal-700 bg-clip-text text-transparent">
               Ирам

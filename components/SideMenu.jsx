@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import iramLogo from "../assets/iram_logo.png";
 import { formatTajikPhoneDisplay } from "../lib/phone";
 
 export default function SideMenu({
@@ -34,7 +36,13 @@ export default function SideMenu({
         <div className="p-4 border-b border-gray-100/80">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0 flex-1">
-              <p className="text-xs uppercase tracking-[0.16em] text-gray-500">IRAM</p>
+              <div className="mb-3 flex items-center gap-3">
+                <Image src={iramLogo} alt="IRAM" className="h-12 w-12 rounded-2xl object-contain" priority />
+                <div className="min-w-0">
+                  <p className="text-xs uppercase tracking-[0.16em] text-gray-500">IRAM</p>
+                  <p className="text-sm font-semibold text-gray-900">Санаторий</p>
+                </div>
+              </div>
               {user && (
                 <>
                   <p className="font-semibold text-gray-900 truncate" title={userLabel}>
