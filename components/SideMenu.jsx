@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import iramLogo from "../assets/iram_logo.png";
+import iramLogo from "../assets/iram.PNG";
 import { formatTajikPhoneDisplay } from "../lib/phone";
 
 export default function SideMenu({

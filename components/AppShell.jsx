@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import SideMenu from "./SideMenu";
 import { getNavItems } from "../lib/nav";
 import { setAuthToken } from "../lib/api";
-import iramLogo from "../assets/iram_logo.png";
+import iramLogo from "../assets/iram.PNG";
 import { formatTajikPhoneDisplay } from "../lib/phone";
 
 function navLinkClass(active) {

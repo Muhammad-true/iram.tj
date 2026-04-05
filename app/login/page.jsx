@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { api, setAuthToken } from "../../lib/api";
-import iramLogo from "../../assets/iram_logo.png";
+import iramLogo from "../../assets/iram.PNG";
 import { formatTajikPhoneDisplay, formatTajikPhoneForApi, TAJIKISTAN_PHONE_PREFIX } from "../../lib/phone";
 
 function humanizeLoginError(message) {

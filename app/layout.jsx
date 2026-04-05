@@ -1,5 +1,5 @@
 import "./globals.css";
-import iramLogo from "../assets/iram_logo.png";
+import iramLogo from "../assets/iram.PNG";
 
 export const metadata = {
   title: "IRAM",

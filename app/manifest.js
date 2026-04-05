@@ -1,4 +1,4 @@
-import iramLogo from "../assets/iram_logo.png";
+import iramLogo from "../assets/iram.PNG";
 
 export default function manifest() {
   return {
